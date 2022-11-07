@@ -1,0 +1,45 @@
+Q4) What are the different states of a thread, or what is thread lifecycle?
+Ans:
+
+	Life-cycle of a Thread(State of thread):
+	
+	In Java, a thread always exists in any one of the following:
+	
+	1.New State
+	2.Runnable State
+	3.Running State 
+	4.Blocked State
+	5.Dead State
+	
+	1.New State:
+		Whenever a new thread is created, it is always in the new state.
+		For a thread in the new state, the code has not been run 
+		yet and thus has not begun its execution.
+	
+	2.Runnable State:
+		A thread, that is ready to run is then moved to the runnable state. 
+		In the runnable state, the thread may be running or may be ready to run at any given instant of time. 
+		It is the duty of the thread scheduler to provide the thread time to run, i.e., moving the thread the running state.
+		A program implementing multithreading acquires a fixed slice of time to each individual thread. 
+		Each and every thread runs for a short span of time and when that allocated time slice is over, 
+		the thread voluntarily gives up the CPU to the other thread, so that the other threads can also run for their slice of time. 
+		Whenever such a scenario occurs, all those threads that are willing to run, waiting for their turn to run, lie in the runnable 
+		state. In the runnable state, there is a queue where the threads lie.
+		
+    3.Running: 
+    	When the thread gets the CPU, it moves from the runnable to the running state. 
+    	Generally, the most common change in the state of a thread is from runnable to running and again back to runnable.
+		
+	4.Blocked State:
+		Whenever a thread is inactive for a span of time (not permanently) then, either the thread is in the 
+		blocked state or is in the waiting state.
+	
+	5.Dead State:
+		A thread reaches the termination state because of the following reasons:
+
+When a thread has finished its job, then it exists or terminates normally.
+Abnormal termination: It occurs when some unusual events such as an unhandled exception or segmentation fault.
+A terminated thread means the thread is no more in the system. In other words, the thread is dead, and there is no way one can 
+respawn (active after kill) the dead thread.
+
+		

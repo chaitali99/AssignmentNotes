@@ -1,0 +1,16 @@
+package com.masai.dao;
+
+import com.masai.model.Employee;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+
+	@Override
+	public String insertEmployeeDetails(Employee employee) {
+		String message="Not inserted...........";
+		
+		Connection conn=DBUtility.provideConnection()
+		
+		return message;
+	}
+
+}

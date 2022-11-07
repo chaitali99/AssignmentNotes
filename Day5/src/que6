@@ -1,0 +1,6 @@
+Q6) What if we call java run() method directly instead start() method?
+Ans:
+
+	If run() method is called directly instead of start() method in java code, run() 
+	method will treated as a normal overridden method of the thread class.This run method will
+	executed within the context of the current, not in a new thread.

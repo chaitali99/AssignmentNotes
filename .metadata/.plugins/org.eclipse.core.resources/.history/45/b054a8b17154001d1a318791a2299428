@@ -1,0 +1,19 @@
+package que4;
+
+import java.util.Set;
+import java.util.TreeSet;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Set<Student> student=new TreeSet<>();
+		student.add(new Student(1,"chaitali",560));
+		student.add(new Student(1,"chaitali",560));
+		student.add(new Student(2,"chaitu",760));
+		student.add(new Student(3,"akshay",850));
+		student.add(new Student(4,"amruta",980));
+		student.add(new Student(5,"payal",840));
+
+	}
+
+}

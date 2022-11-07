@@ -1,0 +1,10 @@
+Q1.What do you mean by multithreading? why is it important?
+Ans:
+	Multithreading allows the execution of multiple parts of a program at the same time.These parts
+	are known as threads and are lightweight processes available within the process. So multithreading 
+	leads to maximum utilizayion of the CPU by multitasking.
+	
+	Importance:
+		Multithreading saves time as you can perform multiple operation together. The threads are 
+		independent, so it does not block the user to perform multiple operations at the same 
+		time and also, if an exception occurs in a single thread it does not affect any other threads.

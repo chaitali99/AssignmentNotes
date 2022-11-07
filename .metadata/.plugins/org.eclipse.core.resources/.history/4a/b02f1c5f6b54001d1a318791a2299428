@@ -1,0 +1,5 @@
+package que7;
+
+public class Dhoni extends Thread{
+	
+}

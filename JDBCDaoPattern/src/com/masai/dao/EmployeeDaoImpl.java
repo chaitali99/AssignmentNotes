@@ -1,0 +1,65 @@
+package com.masai.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.masai.model.Employee;
+import com.masai.utility.DBUtil;
+
+public class EmployeeDaoImpl implements EmployeeDao{
+
+	@Override
+	public String insertEmployeeDetails(Employee employee) {
+		String message="Not inserted...........";
+		
+		try(Connection conn=DBUtil.provideConnection()){
+			
+			PreparedStatement ps=conn.prepareStatement("insert into employee3 values(?,?,?,?)");
+			
+			ps.setInt(1, employee.getId());
+			ps.setString(2, employee.getName());
+			ps.setString(3, employee.getAddress());
+			ps.setInt(4, employee.getSalary());
+			
+			int x=ps.executeUpdate();
+			
+			if(x>0) {
+				message="Record inserted successfully..........";
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return message;
+	}
+
+	@Override
+	public int getSalaryById(int id) {
+		
+		int sal=-1;
+		
+		try(Connection conn=DBUtil.provideConnection()){
+			
+			PreparedStatement ps=conn.prepareStatement("select salary from employee3 where eid=?");
+			
+			ps.setInt(1, id);
+			
+			ResultSet rs=ps.executeQuery();
+			
+			if(rs.next()) {
+				sal=rs.getInt(sal);
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return sal;
+	}
+
+}
